@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:extension:{daa9d644-e452-457c-8c55-5033e2af278e}"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAKSWru7v3srabS0ZgPqKa7N3jdKnQAh0ALfci8OhIl2gRZ3zEb/hG1KRE27jP0h7HC9FxAyhJ1RSn4SgOzzT+lnjSISfdbiskWLvZ5v50jqpLky/yKqanTKOaUo+nZs4D6iaCe5PLrysFCA8UJVRW+3aCdR1cOJ2wwBBxD29fp1L">
+    <em:updates RDF:resource="rdf:#$ItlcF2"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$JtlcF2"
+                   em:version="1.6.1">
+    <em:targetApplication RDF:resource="rdf:#$MtlcF2"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$MtlcF2"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="1.5"
+                   em:maxVersion="4.0"
+                   em:updateLink="http://lj.wblinks.com/toolbar/ljs_toolbar/ljs_toolbar-1.6.1.xpi"
+                   em:updateHash="sha256:87cd5462d5cd700442e5e38359ad6e9aa2ac335c22af7fde7da4102591612340" />
+  <RDF:Seq RDF:about="rdf:#$ItlcF2">
+    <RDF:li RDF:resource="rdf:#$JtlcF2"/>
+  </RDF:Seq>
+</RDF:RDF>

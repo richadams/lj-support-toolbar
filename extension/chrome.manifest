@@ -1,0 +1,3 @@
+content ljs_toolbar jar:chrome/ljs_toolbar.jar!/content/
+overlay chrome://browser/content/browser.xul chrome://ljs_toolbar/content/ljs_toolbar.xul
+skin ljs_toolbar classic/1.0 jar:chrome/ljs_toolbar.jar!/skin/

@@ -1,0 +1,44 @@
+/* LJ Support Toolbar 1.4
+   Rich Adams (http://wblinks.com) */
+
+#ljst-toolbar     { list-style-image: url("chrome://ljs_toolbar/skin/lj_small.png"); }
+
+#ljst-open        { list-style-image: url("chrome://ljs_toolbar/skin/open.png"); }
+#ljst-green       { list-style-image: url("chrome://ljs_toolbar/skin/green.png"); }
+#ljst-closed      { list-style-image: url("chrome://ljs_toolbar/skin/closed.png"); }
+#ljst-youreplied  { list-style-image: url("chrome://ljs_toolbar/skin/youreplied.png"); }
+
+#ljst-request     { list-style-image: url("chrome://ljs_toolbar/skin/reqs.png"); }
+#ljst-faq         { list-style-image: url("chrome://ljs_toolbar/skin/faq.png"); }
+
+#ljst-usermenu    { list-style-image: url("chrome://ljs_toolbar/skin/user.png"); }
+
+#ljst-sitestatus  { list-style-image: url("chrome://ljs_toolbar/skin/status.png"); }
+
+#ljst-communities { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-entries     { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-general     { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-mobile      { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-scrapbook   { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-styles      { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-syn         { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-userpics    { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-web-ui      { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-docs        { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-russian     { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+#ljst-independent { list-style-image: url("chrome://ljs_toolbar/skin/cat.png"); display: none; }
+
+#ljst-links       { list-style-image: url("chrome://ljs_toolbar/skin/links.png"); }
+
+#ljst-search      { list-style-image: url("chrome://ljs_toolbar/skin/search.png"); }
+
+#ljst-irc         { list-style-image: url("chrome://ljs_toolbar/skin/irc.png"); }
+
+/* Misc */
+#ljst-loading     { list-style-image: url("chrome://ljs_toolbar/skin/loading.gif"); display: none; }
+
+/* Force icons to appear alongside */
+#ljst-styles > .toolbarbutton-menubutton-button 
+{
+	-moz-box-orient: horizontal;
+}

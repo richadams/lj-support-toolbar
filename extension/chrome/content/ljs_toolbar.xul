@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://ljs_toolbar/skin/ljs_toolbar.css" type="text/css"?>
+<overlay id="ljs_toolbar-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://ljs_toolbar/content/ljs_toolbar.js" />
+	<toolbox id="navigator-toolbox">
+		<toolbar id="ljst-toolbar" toolbarname="LJ Support Toolbar" label="Support Toolbar" accesskey="L" class="chromeclass-toolbar" context="toolbar-context-menu" hidden="false" persist="hidden">
+				
+			<toolbarbutton id="ljst-cat" type="menu" label="" tooltiptext="Change Category">
+				<menupopup>
+					<menuitem label="(All Public)"  oncommand="ljst_setCat(10)" />
+					<menuitem label="Communities"   oncommand="ljst_setCat(0)" />
+					<menuitem label="Documentation" oncommand="ljst_setCat(11)" />
+					<menuitem label="Entries"       oncommand="ljst_setCat(1)" />
+					<menuitem label="G/unk"         oncommand="ljst_setCat(2)" />
+					<menuitem label="Issues"        oncommand="ljst_setCat(3)" />
+					<menuitem label="Mobile"        oncommand="ljst_setCat(4)" />
+					<menuitem label="Russian"       oncommand="ljst_setCat(12)" />
+					<menuitem label="ScrapBook"     oncommand="ljst_setCat(5)" />
+					<menuitem label="Styles"        oncommand="ljst_setCat(6)" />
+					<menuitem label="Syndication"   oncommand="ljst_setCat(7)" />
+					<menuitem label="Independent"   oncommand="ljst_setCat(13)" />
+					<menuitem label="Userpics"      oncommand="ljst_setCat(8)" />
+					<menuitem label="Web"           oncommand="ljst_setCat(9)" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-loading" />
+			<toolbarbutton id="ljst-open"       tooltiptext="Open"        label="-" oncommand="ljst_loadOpen()" />			
+			<toolbarbutton id="ljst-green"      tooltiptext="Green"       label="-" oncommand="ljst_loadGreen()" />			
+			<toolbarbutton id="ljst-closed"     tooltiptext="Closed"      label=""  oncommand="ljst_loadClosed()" />			
+			<toolbarbutton id="ljst-youreplied" tooltiptext="You Replied" label=""  oncommand="ljst_loadYouReplied()" />
+			
+			<toolbarbutton id="ljst-request" tooltiptext="Request #" label="Request #" oncommand="ljst_loadRequest()" />
+			<toolbarbutton id="ljst-faq"     tooltiptext="FAQ #"     label="FAQ #"     oncommand="ljst_loadFAQ()" />
+			
+			
+			<toolbarbutton id="ljst-usermenu" type="menu" label="User" tooltiptext="User">
+				<menupopup>
+				      <menuitem label="Profile"
+				      tooltiptext="View a user's profile"
+				      oncommand="ljst_viewProfile()" />
+				      
+				      <menuitem label="Recent Touches"
+				      tooltiptext="View a user's recent touches"
+				      oncommand="ljst_recentTouches()" />
+				      
+				      <menuitem label="Privs"
+				      tooltiptext="View a user's privs"
+				      oncommand="ljst_viewPrivs()" />
+				      
+				      <menuitem label="Request History"
+				      tooltiptext="View a user's support request history"
+				      oncommand="ljst_viewRequestHistory()" />
+				      
+				      <menuitem label="Status History"
+				      tooltiptext="View a user's status history"
+				      oncommand="ljst_viewStatusHistory()" />
+				      
+				      <menuitem label="Memcache Purge"
+				      tooltiptext="Purge the memcache data for a specific user"
+				      oncommand="ljst_purgeMemCache()" />
+				      
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-sitestatus" type="menu" label="Status" tooltiptext="Status">
+				<menupopup>
+				      <menuitem label="Cluster Status"
+				      tooltiptext="View current cluster status"
+				      oncommand="ljst_viewClusterStatus()" />
+				      
+				      <menuitem label="Offsite Status Page"
+				      tooltiptext="View the offsite status page"
+				      oncommand="ljst_viewOffsiteStatus()" />
+				      
+				      <menuitem label="Edit BBB"
+				      tooltiptext="Goto the edit BBB page"
+				      oncommand="ljst_editBBB()" />
+				      
+				      <menuitem label="Department Stats"
+				      tooltiptext="View department stats"
+				      oncommand="ljst_viewDeptStats()" />
+				      
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-communities" type="menu" label="Communities" tooltiptext="Communities">
+				<menupopup>
+				      <menuitem label="Community Settings"
+				      tooltiptext="View a community's settings"
+				      oncommand="ljst_viewCommSettings()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-entries" type="menu" label="Entries" tooltiptext="Entries">
+				<menupopup>
+				      <menuitem label="Entry Properties"
+				      tooltiptext="View the properies of a specfic entry"
+				      oncommand="ljst_loadEntryProps()" />
+				      
+				      <menuitem label="Friends Directory Search"
+				      tooltiptext="Directory search results for people who username lists as friends who have posted in the last 14 days"
+				      oncommand="ljst_viewEntryDSearch()" />
+				      
+				      <menuitem label="What Goes Where"
+				      tooltiptext="Entries speicifc what goes where post"
+				      oncommand="ljst_loadEntryWGW()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-mobile" type="menu" label="Mobile" tooltiptext="Mobile">
+				<menupopup>
+				      <menuitem label="Email Gateway Log"
+				      tooltiptext="View a users email log"
+				      oncommand="ljst_viewEmailGWLog()" />
+				      
+				      <menuitem label="SpinVox Log"
+				      tooltiptext="View a users spinvox log"
+				      oncommand="ljst_viewSpinVoxLog()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-scrapbook" type="menu" label="ScrapBook" tooltiptext="ScrapBook">
+				<menupopup>
+				      <menuitem label="User ScrapBook"
+				      tooltiptext="View a users scrapbook"
+				      oncommand="ljst_viewScrapBook()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-styles" type="menu" label="Styles" tooltiptext="Styles">
+				<menupopup>
+				      <menuitem label="Overrides"
+				      tooltiptext="View a users overrides"
+				      oncommand="ljst_viewOverrides()" />
+				      
+				      <menuitem label="Layers by ID"
+				      tooltiptext="View a layer by the layer ID"
+				      oncommand="ljst_viewLayerId()" />
+				      
+				      <menuitem label="Layers by User"
+				      tooltiptext="View layers by username"
+				      oncommand="ljst_viewLayerUser()" />
+				      
+				      <menuitem label="Style Debug"
+				      tooltiptext="View debug information for a user's style"
+				      oncommand="ljst_viewStyleDebug()" />
+				      
+				      <menuitem label="Style Info"
+				      tooltiptext="View debug information for a user's style"
+				      oncommand="ljst_viewStyleInfo()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-syn" type="menu" label="Syndication" tooltiptext="Syndication">
+				<menupopup>
+				      <menuitem label="W3C Feed Validator"
+				      tooltiptext="Go to the W3C Feed Validator"
+				      oncommand="ljst_gotoFeedValid()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-userpics" type="menu" label="Userpics" tooltiptext="Userpics">
+				<menupopup>
+				      <menuitem label="User's Userpics"
+				      tooltiptext="View a users userpics"
+				      oncommand="ljst_viewUserpics()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-links" type="menu" label="Links" tooltiptext="Useful Links">
+				<menupopup>
+				      <menuitem label="Jira"
+				      tooltiptext="Go to bug tracking"
+				      oncommand="ljst_gotoJira()" />
+				      
+				      <menuitem label="Admin Console"
+				      tooltiptext="Go to the Admin Console"
+				      oncommand="ljst_gotoAdminConsole()" />
+				      
+				      <menuitem label="Beta Testing"
+				      tooltiptext="Go to the page for beta testing"
+				      oncommand="ljst_gotoBetaTest()" />
+				      
+				      <menuitem label="Wiki"
+				      tooltiptext="Load the support wiki"
+				      oncommand="ljst_viewSupportWiki()" />
+				      
+				      <menuitem label="Babelfish"
+				      tooltiptext="Go to babelfish"
+				      oncommand="ljst_gotoBabelfish()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-search" type="menu" label="Search" tooltiptext="Search">
+				<menupopup>
+				      <menuitem label="FAQ Search"
+				      tooltiptext="Search the FAQs for a specific string"
+				      oncommand="ljst_searchFAQ()" />
+				      
+				      <menuitem label="Request Search"
+				      tooltiptext="Search requests for a specific string"
+				      oncommand="ljst_searchRequest()" />
+				</menupopup>
+			</toolbarbutton>
+			
+			<toolbarbutton id="ljst-irc" tooltiptext="IRC" label="IRC" oncommand="ljst_loadIRC()" />
+		</toolbar>
+	</toolbox>
+</overlay>
